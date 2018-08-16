@@ -1,3 +1,7 @@
+/* slash-ascii.c - Outputs text from ASCII text file */
+/* specified by the user based on numbers of forward */
+/* slashes terminated by backslashes - by Dan Kupka  */
+
 #include <stdio.h>
 #include <stdlib.h>
 
