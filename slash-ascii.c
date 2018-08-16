@@ -48,8 +48,6 @@ int main(int argc, char *argv[]) {
   }
   printf("bk_count: %d\n", bk_count);
 
-  bk_count = 0;
-
   /* declare a pointer to a buffer, and allocate memory the size of which is */
   /* the number of backslashes counted from the previous loop */
   char *buffer = malloc( bk_count * sizeof(char) );
@@ -64,6 +62,7 @@ int main(int argc, char *argv[]) {
 
   /* reset the position of the file pointer in the file read to position 0 */
   fseek(fp, 0L, SEEK_SET);
+  bk_count = 0;
 
   /* run through the file read again */
   while ( ( ch = fgetc(fp) ) != EOF ) {
